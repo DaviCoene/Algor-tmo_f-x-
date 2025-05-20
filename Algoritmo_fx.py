@@ -63,7 +63,8 @@ def algoritmo_(qtdexpoentesMax = 3, complexidade = 1):
         for x in range(qtdexpoentesMax):
             if x == 0:
                 valorfuncao = valorfuncao + constante
-                Funcao_armazenada.append(str(valorfuncao))
+                if f == 0:
+                    Funcao_armazenada.append(str(valorfuncao))
             else:
                 for i in valores:
                     if globals()[i] == x and globals()[i] != 0:
