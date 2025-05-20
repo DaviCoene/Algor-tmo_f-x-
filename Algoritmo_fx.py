@@ -3,11 +3,7 @@ import random
 ## Parametros     
 def algoritmo_(qtdexpoentesMax = 3, complexidade = 1):
     ## Quantidade Máxima do Grau do Expoente
-
-
     ## Grau de complexidade do algorítmo
-
-
     ## ----------------------ALGORITMO------------------------ ##
 
     função = [] # Quantidade de Elementos 
@@ -56,7 +52,7 @@ def algoritmo_(qtdexpoentesMax = 3, complexidade = 1):
             for j in i[1]:
                 listadelete.append(j)
 
-    valores = [x for x in função if x not in listadelete] # Adiciona valores que serão usados na função
+    valores = [x for x in função if x not in listadelete and globals()[x] != 0] # Adiciona valores que serão usados na função
 
     for i in listadelete:   #Deleta variaveis repetídas
         del globals()[i]
@@ -70,7 +66,7 @@ def algoritmo_(qtdexpoentesMax = 3, complexidade = 1):
                 Funcao_armazenada.append(str(valorfuncao))
             else:
                 for i in valores:
-                    if globals()[i] == x:
+                    if globals()[i] == x and globals()[i] != 0:
                         valorconst = random.randint(1,2*complexidade)
                         Funcao_armazenada.append(" + ")
                         Funcao_armazenada.append(str(valorconst) +"x"+"^"+str(f))
@@ -80,7 +76,7 @@ def algoritmo_(qtdexpoentesMax = 3, complexidade = 1):
 
     Funcao_armazenada.reverse()
     print(Funcao_armazenada)
-pass
-pass
+algoritmo_()
+
 
     
